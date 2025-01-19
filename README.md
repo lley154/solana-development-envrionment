@@ -78,7 +78,13 @@ WebSocket PubSub URL: ws://127.0.0.1:8900
 ⠁ 00:00:23 | Processed Slot: 53 | Confirmed Slot: 53 | Finalized Slot: 22 | Full Snapshot Slot: - | Incremental Sna^C
 ```
 
+In a new terminal window, start the logger
+```
+$ solana logs
+```
+
 #### Top up with additional funds
+In a new terminal window
 ```
 $ solana balance
 500000000 SOL
