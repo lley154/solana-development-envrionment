@@ -101,6 +101,18 @@ Signature: 4kkzMNDYjv8NKweRmgiSyFScTs369mVeUi2bT5CFPzE7Rh4TZ7kUG9UHkdJniUQHiMh1c
 $ git clone https://github.com/lley154/full-stack-solana-dev.git
 $ cd full-stack-solana-dev/counter
 $ anchor keys sync
+```
+
+Set the correct directory path to your key file in the ```Anchor.toml``` file in the provider section
+```
+# Provider configuration
+[provider]
+cluster = "localnet"
+wallet = "/your-home-directory-path/.config/solana/id.json"
+```
+
+Then start the test run
+```
 $ anchor test --skip-local-validator
 
 Counter PDA: 4s4WZUgaYfocxk1kGzXj4cDfu1fx3H9x87j6XRzXo418
