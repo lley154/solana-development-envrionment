@@ -101,6 +101,7 @@ Signature: 4kkzMNDYjv8NKweRmgiSyFScTs369mVeUi2bT5CFPzE7Rh4TZ7kUG9UHkdJniUQHiMh1c
 $ git clone https://github.com/lley154/full-stack-solana-dev.git
 $ cd full-stack-solana-dev/counter
 $ anchor keys sync
+$ yarn install
 ```
 
 Set the correct directory path to your key file in the ```Anchor.toml``` file in the provider section
