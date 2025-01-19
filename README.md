@@ -213,15 +213,42 @@ Balance: 1.40350488 SOL
 
 #### To upgrade a program and calcuate rent costs
 ```
+$ solana program show --programs
+
+Program Id                                   | Slot      | Authority                                    | Balance
+7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi | 692       | FaV2MhVaj12MAEVG2VLz9JJvpf3jnXgP2pcCgNEmCkLG | 1.40350488 SOL
+
 $ du -h target/deploy/counter.so 
 200K	target/deploy/counter.so
 
 $ solana rent 200000
 Rent-exempt minimum: 1.39289088 SOL
 
-$ solana program extend NFSpGsEHUEFsUgarFtvfFkWyRSkmQj37brf4H5T1oiU 200000
+$ solana program show 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi
 
-Extended Program Id NFSpGsEHUEFsUgarFtvfFkWyRSkmQj37brf4H5T1oiU by 200000 bytes
+Program Id: 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi
+Owner: BPFLoaderUpgradeab1e11111111111111111111111
+ProgramData Address: 6ARohEorkPasjTuU5T9xCcyNdLjRYidEMAehpL59EdpH
+Authority: FaV2MhVaj12MAEVG2VLz9JJvpf3jnXgP2pcCgNEmCkLG
+Last Deployed In Slot: 692
+Data Length: 201480 (0x31308) bytes
+Balance: 1.40350488 SOL
+
+
+$ solana program extend 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi 200000
+
+Extended Program Id 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi by 200000 bytes
+
+
+$ solana program show 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi
+
+Program Id: 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi
+Owner: BPFLoaderUpgradeab1e11111111111111111111111
+ProgramData Address: 6ARohEorkPasjTuU5T9xCcyNdLjRYidEMAehpL59EdpH
+Authority: FaV2MhVaj12MAEVG2VLz9JJvpf3jnXgP2pcCgNEmCkLG
+Last Deployed In Slot: 1781
+Data Length: 401480 (0x62048) bytes
+Balance: 2.79550488 SOL
 ```
 
 #### Close the program account(s)
