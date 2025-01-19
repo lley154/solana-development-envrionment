@@ -130,6 +130,32 @@ Count: 1
 Done in 2.22s.
 ```
 
+The solana log terminal window should show something like
+```
+Transaction executed in slot 696:
+  Signature: 34vgqkF2kiwKgGdgBumNRWfS9AfCE4uLTtqXcFxTibwYLGiJ6GBEjnHCycoqFWzSKXkPHHbpTKsfrcQ6rth4Xh6Z
+  Status: Ok
+  Log Messages:
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi invoke [1]
+    Program log: Instruction: Initialize
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program log: Counter account created! Current count: 0
+    Program log: Counter bump: 255
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi consumed 7943 of 200000 compute units
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi success
+Transaction executed in slot 697:
+  Signature: 37ogVPhP1gfkWViddigUPq1wgej22fZ5JeTB1TAR1i3fcSL5j9qBgwboD9aQZfjZDijKEncqm6o2jeGExQY6hkN7
+  Status: Ok
+  Log Messages:
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi invoke [1]
+    Program log: Instruction: Increment
+    Program log: Previous counter: 0
+    Program log: Counter incremented! Current count: 1
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi consumed 3448 of 200000 compute units
+    Program 7L6fm2A9CDnkksCDS91RHED33WL39HPdbtU7NHnX29fi success
+```
+
 #### Inspect the data account
 ```
 $ solana account 4s4WZUgaYfocxk1kGzXj4cDfu1fx3H9x87j6XRzXo418
